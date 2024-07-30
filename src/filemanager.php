@@ -12,13 +12,13 @@ class FileManager {
   }
 
   public static function getCourseAsJson($courseId) {
-    $year = 2024; // NOG EXTRAHEREN UIT CURSUS ID
-    $fileName = self::getCertificatePath() . "$year/$courseId.json";
+    $year = self::extractYearFromCourseId($courseId);
+    $fileName = self::getCertificatePath() . "$year/$courseId/$courseId.json";
     return self::readFile($fileName);
   }
 
   public static function getCertificateAsJson($courseId, $certificateId) {
-    $year = 2024; // NOG EXTRAHEREN UIT CURSUS ID
+    $year = self::extractYearFromCourseId($courseId);
     $fileName = self::getCertificatePath() . "$year/$courseId/$certificateId.json";
     return self::readFile($fileName);
   }
@@ -28,7 +28,7 @@ class FileManager {
   }
 
   private static function getPagePath() {
-    return __DIR__ . '/pages/';
+    return __DIR__ . '/../html/';
   }
 
   private static function getCertificatePath() {
@@ -42,5 +42,16 @@ class FileManager {
     }
 
     return $fileContent;
+  }
+
+  private static function extractYearFromCourseId($courseId) {
+    $courseWithoutLetters = preg_replace('/[A-Z]/', '', $courseId);
+    $firstTwoChars = substr($courseWithoutLetters, 0, 2);
+    if (is_int($firstTwoChars)) {
+      return '20' . $firstTwoChars;
+    }
+    else {
+      return 2024;
+    }
   }
 }

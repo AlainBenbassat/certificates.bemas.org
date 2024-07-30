@@ -13,5 +13,6 @@
   "certificate_page_p1": "Hierbij bevestigt ondergetekende dat",
   "certificate_page_p2": "heeft deelgenomen aan de opleiding",
   "certificate_page_first_name_label": "Voornaam",
-  "certificate_page_last_name_label": "Naam"
+  "certificate_page_last_name_label": "Naam",
+  "error_page_title": "Fout"
 }

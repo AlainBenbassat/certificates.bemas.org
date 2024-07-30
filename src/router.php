@@ -16,9 +16,7 @@ class Router {
       $this->showPage();
     }
     catch (Exception $e) {
-      $this->page = 'error.html';
-      $this->statusCode = 401;
-      $this->showPage();
+      $this->showErrorPage($e->getMessage());
     }
   }
 
@@ -38,6 +36,16 @@ class Router {
 
     http_response_code($this->statusCode);
     $pageContent = FileManager::getHtmlPage($this->page);
+    echo $tokenReplacer->replaceTokens($pageContent);
+  }
+
+  private function showErrorPage($msg) {
+    $json = FileManager::getLangageStringsAsJson($this->language);
+    $tokenReplacer = new TokenReplacer($json);
+
+    http_response_code(401);
+    $pageContent = FileManager::getHtmlPage('error.html');
+    $tokenReplacer->addJsonTokens('{"error_message":"' . $msg . '"}');
     echo $tokenReplacer->replaceTokens($pageContent);
   }
 
