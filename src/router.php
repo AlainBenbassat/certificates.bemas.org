@@ -10,7 +10,7 @@ class Router {
   private $courseId = '';
   private $certificateId = '';
 
-  public function init() {
+  public function process() {
     try {
       $this->parseRequest();
       $this->showPage();

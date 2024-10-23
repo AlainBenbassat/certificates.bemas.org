@@ -19,3 +19,51 @@ p, pre {
   margin-top: 0;
   margin-bottom: 1em;
 }
+
+article {
+  border-top: 4px solid #094457;
+  padding-top: 8px;
+}
+
+#main {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#certificate {
+  text-align: center;
+}
+
+#logo {
+  float: left;
+  margin-right: 1rem;
+}
+
+#staff {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+#staff th {
+  text-decoration: underline;
+}
+
+#staff td {
+  width: 50%;
+  vertical-align: top;
+}
+
+#address {
+  text-align: left;
+}
+
+#first_and_last_name {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+#course_title {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
