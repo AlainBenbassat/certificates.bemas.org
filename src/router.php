@@ -21,17 +21,17 @@ class Router {
   }
 
   private function showPage() {
-    $json = FileManager::getLangageStringsAsJson($this->language);
-    $tokenReplacer = new TokenReplacer($json);
+    $jsonCommonStrings = FileManager::getLangageStringsAsJson($this->language);
+    $tokenReplacer = new TokenReplacer($jsonCommonStrings);
 
-    if ($this->courseId) {
-      $json = FileManager::getCourseAsJson($this->courseId);
-      $tokenReplacer->addJsonTokens($json);
+    if ($this->courseId || $this->certificateId) {
+      $jsonCourse = FileManager::getCourseAsJson($this->courseId);
+      $tokenReplacer->addJsonTokens($jsonCourse, $this->language);
     }
 
     if ($this->certificateId) {
-      $json = FileManager::getCertificateAsJson($this->courseId, $this->certificateId);
-      $tokenReplacer->addJsonTokens($json);
+      $jsonCertificate = FileManager::getCertificateAsJson($this->courseId, $this->certificateId);
+      $tokenReplacer->addJsonTokens($jsonCertificate);
     }
 
     http_response_code($this->statusCode);

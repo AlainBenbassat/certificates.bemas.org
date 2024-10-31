@@ -7,10 +7,14 @@ class TokenReplacer {
     $this->addJsonTokens($json);
   }
 
-  public function addJsonTokens(string $json): void {
+  public function addJsonTokens(string $json, string $language = null): void {
     $decodedJson = json_decode($json, TRUE);
     if (empty($decodedJson)) {
       return;
+    }
+
+    if ($language) {
+      $decodedJson = $decodedJson[$language];
     }
 
     foreach ($decodedJson as $k => $v) {
