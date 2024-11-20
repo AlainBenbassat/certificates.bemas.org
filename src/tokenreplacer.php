@@ -18,6 +18,10 @@ class TokenReplacer {
     }
 
     foreach ($decodedJson as $k => $v) {
+      if (is_array($v)) {
+        $v = implode('<br>', $v);
+      }
+
       $this->tokens['{' . $k . '}'] = $v;
     }
   }
