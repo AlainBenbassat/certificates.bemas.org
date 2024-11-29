@@ -6,6 +6,12 @@ html {
   text-rendering: optimizeLegibility;
 }
 
+body {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
   line-height: 1.2;
@@ -23,6 +29,34 @@ p, pre {
 article {
   border-top: 4px solid #094457;
   padding-top: 8px;
+}
+
+#langnav {
+  background-color: #176c88;
+  color: white;
+  padding: 5px;
+}
+
+#langnav a:hover, #langnav a:visited {
+  color: white;
+}
+
+#sitename {
+  font-weight: bold;
+  font-size: 38px;
+  margin-left: 20px;
+}
+
+#langnav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+
+#langnav li {
+  display: inline;
+  margin-left: 10px;
 }
 
 #main {
