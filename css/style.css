@@ -31,14 +31,19 @@ article {
   padding-top: 8px;
 }
 
-#langnav {
+#mainnav {
   background-color: #176c88;
   color: white;
   padding: 5px;
 }
 
-#langnav a:link, #langnav a:hover, #langnav a:visited, #langnav a:active {
+#mainnav a:link, #mainnav a:hover, #mainnav a:visited, #mainnav a:active {
   color: white;
+  text-decoration: none;
+}
+
+#langnav a:link {
+  text-decoration: underline;
 }
 
 #sitename {
@@ -47,10 +52,9 @@ article {
   margin-left: 20px;
 }
 
-#langnav ul {
+#langnav {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  margin-right: 5px;
   float: right;
 }
 
