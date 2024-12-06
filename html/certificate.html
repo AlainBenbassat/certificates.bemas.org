@@ -14,21 +14,26 @@
       <p id="first_and_last_name">{first_name} {last_name}</p>
       <p>{certificate_page_p2}</p>
       <p id="course_title">{course_title}</p>
+      <p>{certificate_page_p3}</p>
       <p>{certificate_page_followed_at_label} {course_location}<br>{certificate_page_followed_on_label} {course_dates}</p>
       <table id="staff">
         <tr>
-          <th>{certificate_page_trainer_label}</th>
           <th>{certificate_page_organizer_label}</th>
+          <th>{certificate_page_trainer_label}</th>
         </tr>
         <tr>
-          <td>{course_trainers}</td>
+          <td><img alt="signature" src="/assets/director.png"></td>
+          <td></td>
+        </tr>
+        <tr>
           <td>{certificate_page_organizer_name}<br>{certificate_page_organizer_job_title}</td>
+          <td>{course_trainers}</td>
         </tr>
       </table>
       <footer>
         <div id="address">
           <p>
-            <img id="logo" src="/assets/bemas_logo.png" width=100 height=100>
+            <img id="logo" alt="logo" src="/assets/bemas_logo.png" width=100 height=100>
             {address_line_1}<br>
             {address_line_2}<br>
             {address_line_3}<br>
