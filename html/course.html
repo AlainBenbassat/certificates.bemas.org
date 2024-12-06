@@ -1,12 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{language_code}">
 <head>
   <meta charset="UTF-8">
-  <title>BEMAS Course</title>
+  <title>{site_name}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<nav id="langnav">
+  <img src="/assets/bemas_logo.png" width="50" height="50" style="vertical-align:middle"><span id="sitename">BEMAS</span>
+  <ul>
+    <li><a href="/nl/{course_code}">nl</a></li>
+    <li><a href="/fr/{course_code}">fr</a></li>
+    <li><a href="/en/{course_code}">en</a></li>
+  </ul>
+</nav>
+
+<div id="main">
   <h1>{course_title}</h1>
   <p>{course_description}</p>
+</div>
 </body>
 </html>
