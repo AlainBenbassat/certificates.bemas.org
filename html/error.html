@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="{lang}">
+<html lang="{language_code}">
 <head>
   <meta charset="UTF-8">
-  <title>{error_page_title}</title>
+  <title>{site_name}</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+<nav id="langnav">
+  <img src="/assets/bemas_logo.png" width="50" height="50" style="vertical-align:middle"><span id="sitename">BEMAS</span>
+  <ul>
+    <li><a href="/nl">nl</a></li>
+    <li><a href="/fr">fr</a></li>
+    <li><a href="/en">en</a></li>
+  </ul>
+</nav>
+
+<div id="main">
   <h1>{error_page_title}</h1>
-  <p>
-    {error_message}
-  </p>
+  <p>{certificate_not_found}</p>
+</div>
 </body>
 </html>
