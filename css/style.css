@@ -37,7 +37,7 @@ article {
   padding: 5px;
 }
 
-#langnav a:hover, #langnav a:visited {
+#langnav a:link, #langnav a:hover, #langnav a:visited, #langnav a:active {
   color: white;
 }
 
