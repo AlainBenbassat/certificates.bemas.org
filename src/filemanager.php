@@ -47,11 +47,6 @@ class FileManager {
   private static function extractYearFromCourseId($courseId) {
     $courseWithoutLetters = preg_replace('/[A-Z]/', '', $courseId);
     $firstTwoChars = substr($courseWithoutLetters, 0, 2);
-    if (is_int($firstTwoChars)) {
-      return '20' . $firstTwoChars;
-    }
-    else {
-      return 2024;
-    }
+    return '20' . $firstTwoChars;
   }
 }
