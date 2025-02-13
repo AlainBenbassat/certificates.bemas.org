@@ -38,7 +38,7 @@ class FileManager {
   private static function readFile(string $fileName): string {
     $fileContent = file_get_contents($fileName);
     if ($fileContent === FALSE) {
-      throw new Exception('Something went wrong');
+      throw new Exception("Cannot read file: $fileName");
     }
 
     return $fileContent;
