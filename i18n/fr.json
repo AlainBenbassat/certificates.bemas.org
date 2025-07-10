@@ -11,7 +11,7 @@
   "course_page_title_label": "Formation",
   "certificate_page_title": "Attestation de participation",
   "certificate_page_number_label": "Numéro d'attestation :",
-  "certificate_page_p1": "Le soussigné confirme que",
+  "certificate_page_p1": "Nous soussignés confirmons que",
   "certificate_page_p2": "a participé à la formation",
   "certificate_page_p3": "Organisé par la BEMAS - Belgian Maintenance Association asbl",
   "certificate_page_followed_at_label": "Lieu:",
@@ -20,5 +20,7 @@
   "certificate_page_organizer_label": "Organisateur",
   "certificate_page_organizer_name": "Wim Vancauwenberge",
   "certificate_page_organizer_job_title": "Directeur",
+  "certificate_page_secretary_name": "Jan Sinnaeve",
+  "certificate_page_secretary_job_title": "Secrétaire",
   "error_page_title": "Erreur"
 }

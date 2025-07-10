@@ -17,11 +17,23 @@
       <p>{certificate_page_p3}</p>
       <p>{certificate_page_followed_at_label} {course_location}<br>{certificate_page_followed_on_label} {course_dates}</p>
       <p>{certificate_page_number_label} {certificate_number}</p>
-      <p>
-        <span class="staff">{certificate_page_organizer_label}</span><br>
-        <img alt="signature" src="/assets/director.png"><br>
-        {certificate_page_organizer_name}<br>{certificate_page_organizer_job_title}
-      </p>
+      <table class="signatures-container" style="width: 100%;">
+        <tr>
+          <td colspan="2" style="text-align: center;"><span class="staff">{certificate_page_organizer_label}</span></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;"><img alt="director signature" src="/assets/director.png"></td>
+          <td style="text-align: center;"><img alt="secretary signature" src="/assets/secretary.png"></td>
+        </tr>
+        <tr>
+          <td style="text-align: center;">
+            {certificate_page_organizer_name}<br>{certificate_page_organizer_job_title}
+          </td>
+          <td style="text-align: center;">
+            {certificate_page_secretary_name}<br>{certificate_page_secretary_job_title}
+          </td>
+        </tr>
+      </table>
       <footer>
         <div id="address">
           <p>
